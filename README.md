@@ -4,7 +4,7 @@
 	•	Integrate a third party cloud service API into the Tweet processing flow.
 
 # Overview
-
+![Architecture](/ouIDUJT.png)
 Streaming
 
 	•	Reads a stream of tweets from the Twitter Streaming API. Note: you might follow a set of specific keywords that you find interesting
