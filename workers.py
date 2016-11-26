@@ -41,6 +41,7 @@ def task(pid):
             r = requests.get(API_URL, params=payload)
             if r.status_code == 200 and r.json().get("status") != "ERROR":
                 tweet["sentiment"] = r.json().get("docSentiment")
+                print("Sentiment: "+ str(tweet['sentiment']))
                 # index tweet in ES
                 res = es.index(index="tweets", doc_type="tweet", id=tweet["id"], body=tweet)
                 
